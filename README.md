@@ -1,5 +1,7 @@
 # dfx_react_template
 
+> Tips: you can use `sh update_project_name.sh {project_name}` to make yours dfx project by using this template
+
 Welcome to your new dfx_react_template project and to the internet computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
 
 To get started, you might want to explore the project directory structure and the default configuration file. Working with this project in your development environment will not affect any production deployment or identity tokens.
@@ -37,7 +39,7 @@ Once the job completes, your application will be available at `http://localhost:
 If you have made changes to your backend canister, you can generate a new candid interface with
 
 ```bash
-npm run generate
+yarn generate
 ```
 
 at any time. This is recommended before starting the frontend development server, and will be run automatically any time you run `dfx deploy`.
@@ -45,7 +47,7 @@ at any time. This is recommended before starting the frontend development server
 If you are making frontend changes, you can start a development server with
 
 ```bash
-npm start
+yarn start
 ```
 
 Which will start a server at `http://localhost:8080`, proxying API requests to the replica at port 4943.
