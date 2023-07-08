@@ -1,5 +1,6 @@
 import React from "react";
 import { dfx_react_template_backend } from "../../declarations/dfx_react_template_backend";
+import { dfx_react_template_rust_backend } from "../../declarations/dfx_react_template_rust_backend";
 import { Box, Button, Input, Typography } from "@mui/material";
 
 const MyHello = () => {
@@ -8,7 +9,8 @@ const MyHello = () => {
 
   async function doGreet() {
     const greeting = await dfx_react_template_backend.greet(name);
-    setMessage(greeting);
+    const greeting2 = await dfx_react_template_rust_backend.greet(name);
+    setMessage(greeting + " , " + greeting2);
   }
 
   return (

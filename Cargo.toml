@@ -1,0 +1,2 @@
+[workspace]
+members = ["src/dfx_react_template_rust_backend"]
