@@ -1,5 +1,14 @@
 actor {
-  public query func greet(name : Text) : async Text {
-    return "Hello, " # name # "! (from Motoko)";
+  stable var latestName : Text = "";
+
+  public func greet(name : Text) : async Text {
+    let tmp = "Hello, " # name # "! (from Motoko)";
+    latestName := tmp;
+    return tmp;
   };
+
+  public query func getLatestName() : async Text {
+    return latestName;
+  };
+
 };
